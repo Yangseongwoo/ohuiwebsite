@@ -360,7 +360,7 @@ a {
 
 
 
-/* video ���타일링 */
+/* video 일링 */
 .video-container {
     position: relative;
     width: 100%;
@@ -377,7 +377,7 @@ a {
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease;
+    transition: opacity 0.5s ease; /* 전환 시간을 0.5초로 줄이고 ease 효과 적용 */
     background-size: cover;
     background-position: center;
 }
@@ -913,7 +913,7 @@ button.prev-btn {
 
 .ohui-slides-container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out; /* 전환 효과를 부드럽게 수정 */
 }
 
 .ohui-product-panel {
@@ -921,6 +921,7 @@ button.prev-btn {
     display: flex;
     gap: 0px;
     flex-direction: column; /* 기본적으로 세로 방향으로 배치 */
+    opacity: 1; /* 투명도 관련 속성 제거 */
 }
 
 .ohui-hero-image {
@@ -949,13 +950,13 @@ button.prev-btn {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0);
-    border: none;
-    border-radius: 50%;
+    border: none;  /* 테두리 제거 */
     width: 40px;
     height: 40px;
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
+    border-radius: 0;  /* 원형 테두리 제거 */
 }
 
 .ohui-product-layout {
@@ -1087,6 +1088,10 @@ button.prev-btn {
         .ohui-product-showcase h2 {
             font-size: 8vw; /* 뷰포트 너비에 따라 글씨 크기 조정 */
         }
+    }
+
+    .ohui-product-card{
+        padding-bottom: 30px;
     }
 }
 
@@ -1736,7 +1741,7 @@ body.menu-open {
 
 .makeup_left {
     flex: 1; /* 남은 공간을 차지하도록 설정 */
-    min-width: 300px; /* 최소 너비 설정 */
+    min-width: 300px; /* 소 너비 설정 */
 }
 
 .makeup_image {
@@ -2017,7 +2022,7 @@ body.menu-open {
     }
 
     .store-image {
-        width: 100%; /* 모바일에서 이미지가 체 너비를 차지하도록 설정 */
+        width: 100%; /* 모바일에 이미지가 체 너비를 차지하도록 설정 */
     }
 
     .brand_con {
@@ -2440,6 +2445,7 @@ body.menu-open {
     color: #333;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-right: 45px;
 }
 
 .cart-button:hover {
